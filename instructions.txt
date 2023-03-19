@@ -1,0 +1,17 @@
+python app
+1)touch Dockerfile
+FROM python
+WORKDIR /app3
+COPY . /app3
+CMD [ "python","bmi.py" ]
+docker build -t python-app-image .git 
+2) docker run -i python-app-image
+3) docker run -it --name python-container sha256:3616905b1d813e56ee9072611d5766bd99547131bc54d7b39169f0c172ffcc65
+docker stop python-container
+docker start python-container
+4) docker container prune
+docker image prune
+docker rmi python-app-image
+5)  docker build -t python-image:3 .
+6) docker run -it --rm --name python-container2 python-image
+docker stop python-container2
